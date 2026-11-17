@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>見たい作品リスト</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">MY WATCHLIST</p>
+      <h1>見たい作品リスト</h1>
+      <p>気になる作品を忘れないように。<br>見終わったら、チェックをつけましょう。</p>
+    </header>
+
+    <section class="panel" aria-labelledby="add-heading">
+      <h2 id="add-heading">作品を追加する</h2>
+      <form id="add-form">
+        <label for="title">作品名</label>
+        <div class="form-row">
+          <input id="title" type="text" placeholder="例：となりのトトロ" maxlength="100" required>
+          <button class="primary" type="submit">追加する</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="list-section" aria-labelledby="list-heading">
+      <div class="list-heading">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2 id="list-heading">登録した作品</h2>
+        </div>
+        <p id="count" class="count"></p>
+      </div>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+      <p id="empty-message" class="empty">まだ作品がありません。気になる作品を追加してみましょう。</p>
+      <ul id="work-list" class="work-list"></ul>
+    </section>
+    <footer>このブラウザにデータを保存します。</footer>
+  </main>
+</body>
+</html>
